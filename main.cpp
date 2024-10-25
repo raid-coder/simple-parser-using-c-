@@ -128,12 +128,12 @@ void parseLine(string str, vector<stToken>& tokensV) {
         // integer or float
         if (isdigit(str[index])) {
             j = index++;
-            while (isdigit(str[j]) && index < length) {
+            while (isdigit(str[index]) && index < length) {
                 index++;
             }
             if (str[index] == '.') {
                 index++;
-                while (isdigit(str[j]) && index < length) {
+                while (isdigit(str[index]) && index < length) {
                     index++;
                 }
                 word = str.substr(j, index - j);
@@ -188,6 +188,7 @@ void parseLine(string str, vector<stToken>& tokensV) {
             continue;
         }
 
+        cout << "we are here !" << endl;
         index++;
     }
 }
